@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0da21fc9-bbc6-4584-a245-6cf84aac39d5}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="gpu_implementation\gym_tensorflow\maze\hard_maze.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="es_distributed\atari_wrappers.py" />
+    <Compile Include="es_distributed\dist.py" />
+    <Compile Include="es_distributed\es.py" />
+    <Compile Include="es_distributed\es_modified.py" />
+    <Compile Include="es_distributed\ga.py" />
+    <Compile Include="es_distributed\ga_modified.py" />
+    <Compile Include="es_distributed\main.py" />
+    <Compile Include="es_distributed\nses.py" />
+    <Compile Include="es_distributed\optimizers.py" />
+    <Compile Include="es_distributed\policies.py" />
+    <Compile Include="es_distributed\rs.py" />
+    <Compile Include="es_distributed\tabular_logger.py" />
+    <Compile Include="es_distributed\tf_util.py" />
+    <Compile Include="es_distributed\__init__.py" />
+    <Compile Include="gpu_implementation\es.py" />
+    <Compile Include="gpu_implementation\ga.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\atari\tf_atari.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\atari\__init__.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\maze\tf_maze.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\maze\__init__.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\ops\__init__.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\tf_env.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\wrappers\stack_frames.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\wrappers\__init__.py" />
+    <Compile Include="gpu_implementation\gym_tensorflow\__init__.py" />
+    <Compile Include="gpu_implementation\neuroevolution\concurrent_worker.py" />
+    <Compile Include="gpu_implementation\neuroevolution\display.py" />
+    <Compile Include="gpu_implementation\neuroevolution\distributed_helpers.py" />
+    <Compile Include="gpu_implementation\neuroevolution\helper.py" />
+    <Compile Include="gpu_implementation\neuroevolution\models\base.py" />
+    <Compile Include="gpu_implementation\neuroevolution\models\batchnorm.py" />
+    <Compile Include="gpu_implementation\neuroevolution\models\dqn.py" />
+    <Compile Include="gpu_implementation\neuroevolution\models\dqn_xavier.py" />
+    <Compile Include="gpu_implementation\neuroevolution\models\simple.py" />
+    <Compile Include="gpu_implementation\neuroevolution\models\__init__.py" />
+    <Compile Include="gpu_implementation\neuroevolution\optimizers.py" />
+    <Compile Include="gpu_implementation\neuroevolution\tf_util.py" />
+    <Compile Include="gpu_implementation\neuroevolution\__init__.py" />
+    <Compile Include="gpu_implementation\tabular_logger.py" />
+    <Compile Include="scripts\launch.py" />
+    <Compile Include="scripts\viz.py" />
+    <Compile Include="visual_inspector\dimen_red\assemble.py" />
+    <Compile Include="visual_inspector\dimen_red\disassemble.py" />
+    <Compile Include="visual_inspector\dimen_red\reduce.py" />
+    <Compile Include="visual_inspector\figure_base\buttons.py" />
+    <Compile Include="visual_inspector\figure_base\cloud_figures.py" />
+    <Compile Include="visual_inspector\figure_base\figure_control.py" />
+    <Compile Include="visual_inspector\figure_base\fitness_figures.py" />
+    <Compile Include="visual_inspector\figure_base\load_data.py" />
+    <Compile Include="visual_inspector\figure_base\mouse_event.py" />
+    <Compile Include="visual_inspector\figure_base\rollout_base.py" />
+    <Compile Include="visual_inspector\figure_base\settings.py" />
+    <Compile Include="visual_inspector\figure_base\__init__.py" />
+    <Compile Include="visual_inspector\figure_custom\cloud_figures_custom.py" />
+    <Compile Include="visual_inspector\figure_custom\rollout_custom.py" />
+    <Compile Include="visual_inspector\figure_custom\rollout_trajectory.py" />
+    <Compile Include="visual_inspector\figure_custom\__init__.py" />
+    <Compile Include="visual_inspector\main_atari.py" />
+    <Compile Include="visual_inspector\main_mujoco.py" />
+    <Compile Include="visual_inspector\process_bc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="es_distributed" />
+    <Folder Include="gpu_implementation" />
+    <Folder Include="gpu_implementation\gym_tensorflow" />
+    <Folder Include="gpu_implementation\gym_tensorflow\atari" />
+    <Folder Include="gpu_implementation\gym_tensorflow\maze" />
+    <Folder Include="gpu_implementation\gym_tensorflow\ops" />
+    <Folder Include="gpu_implementation\gym_tensorflow\wrappers" />
+    <Folder Include="gpu_implementation\neuroevolution" />
+    <Folder Include="gpu_implementation\neuroevolution\models" />
+    <Folder Include="scripts" />
+    <Folder Include="visual_inspector" />
+    <Folder Include="visual_inspector\dimen_red" />
+    <Folder Include="visual_inspector\figure_base" />
+    <Folder Include="visual_inspector\figure_custom" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
